@@ -8,6 +8,8 @@ public class Number2RMB
 	  Number2RMB n = new Number2RMB();
 	  n.readInChinese(n.input);
 	}
+	
+	
 //定义一个输入的double数据
 public double input;
 
