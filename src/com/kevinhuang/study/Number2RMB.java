@@ -1,6 +1,13 @@
 package com.kevinhuang.study;
 public class Number2RMB
 {
+
+	//主程序入口，先创建对象，然后执行readInChinese方法
+	public static void main(String[ ] args)
+	{
+	  Number2RMB n = new Number2RMB();
+	  n.readInChinese(n.input);
+	}
 //定义一个输入的double数据
 public double input;
 
@@ -18,7 +25,6 @@ public Number2RMB()
 {
   input = 23;
 }
-
 
   //编写转化方法，思路，将该数乘以100，再除以10的i次幂，再取整，如果结果不为零，则加上结果和单位；
 public void readInChinese(double input)
@@ -60,10 +66,4 @@ public void readInChinese(double input)
   }
 }
 
-//主程序入口，先创建对象，然后执行readInChinese方法
-public static void main(String[ ] args)
-{
-  Number2RMB n = new Number2RMB();
-  n.readInChinese(n.input);
-}
 }
