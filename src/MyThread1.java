@@ -1,5 +1,4 @@
-
-
+//线程功能
 public class MyThread1 implements Runnable {
 
 	@Override
