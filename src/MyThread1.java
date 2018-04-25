@@ -5,6 +5,6 @@ public class MyThread1 implements Runnable {
 	public void run() 
 	{
 		// TODO Auto-generated method stub
-		System.out.println("Thread body");
+		System.out.println("Thread MyThread1");
 	}
 }
