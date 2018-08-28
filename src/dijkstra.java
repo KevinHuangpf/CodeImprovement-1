@@ -1,19 +1,18 @@
 public class dijkstra {
 	private static int IMAX = 999999; //不连通状态  
     public static int[][] adjMat = {  
-        {0,1,IMAX,4,IMAX,IMAX},  
-        {1,0,3,IMAX,1,IMAX},
-        {IMAX,3,0,IMAX,1,2},
-        {4,IMAX,IMAX,0,1,IMAX},
-        {IMAX,1,1,1,0,4},
-        {IMAX,IMAX,2,IMAX,4,0},
+        {0,3,2,9999},
+            {3,0,9999,5},
+            {2,9999,0,7},
+            {9999,5,7,0},
+
        
     };  
       
     public static void main(String[] args) {  
     	dijkstra dijstraAlgorithm = new dijkstra();  
         int start = 0;  
-        int end = 4; 
+        int end = 3;
         System.out.println("------测试------");  
         System.out.println("\n从" + start + "到" + end   
                 + "的距离是:" + dijstraAlgorithm.reslove(adjMat, start, end));  
@@ -47,8 +46,7 @@ public class dijkstra {
             d[i] = IMAX;  
         }  
         d[s] = 0; //s到s的距离是0   
-        isVisited[s] = true; //将s标记为已访问过的  
-  
+        isVisited[s] = true; //将s标记为已访问过的
         //尚未遍历的顶点数目，替代优先队列是否为空的判断即Queue.isEmpty()  
         int unVisitedNum = adjMat.length;  
         //用于表示当前所保存的子路径中权重最小的顶点的索引,对应优先队列中,默认是起点  
@@ -74,7 +72,7 @@ public class dijkstra {
             }
             unVisitedNum --;  
             isVisited[index] = true;  
-        }  
+        }
         return d[t];  
     }  
 }  
